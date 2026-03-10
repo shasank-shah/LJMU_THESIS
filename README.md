@@ -1,8 +1,8 @@
-# CodeXtract – Vision-Language Code Extraction Pipeline
+# AI DRIVEN VISION LANGUAGE FRAMEWORK FOR CODE GENERATION
 
 ## Overview
 
-CodeXtract is a research pipeline for extracting source code from images using a hybrid **Vision–Language Model (VLM) + Code Reconstruction Model** approach.
+AI DRIVEN VISION LANGUAGE FRAMEWORK FOR CODE GENERATION is a research pipeline for extracting source code from images using a hybrid **Vision–Language Model (VLM) + Code Reconstruction Model** approach.
 
 The system processes screenshots or photos of code (e.g., VSCode screenshots, camera-captured code images) and reconstructs syntactically valid source code while preserving indentation and structure.
 
