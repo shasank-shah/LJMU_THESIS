@@ -15,7 +15,7 @@ The pipeline was developed as part of an academic research project evaluating **
 The system uses a multi-stage pipeline:
 
 <p align="left">
-  <img src="images/pipeline_architecture.png" width="700">
+  <img src="images/pipeline_architecture.png">
 </p>
 
 <p align="left">
