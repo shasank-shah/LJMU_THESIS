@@ -56,16 +56,13 @@ Language detection is automatically inferred from the ground-truth code file ext
 
 The dataset must follow the structure below:
 
-dataset/
-├── images/
-│ ├── 0001.png
-│ ├── 0002.png
-│ └── ...
-│
-└── code/
-├── 0001.cpp
-├── 0002.py
-└── ...
+<p align="left">
+  <img src="images/dataset.png">
+</p>
+
+<p align="left">
+  <em>Figure 2: Vision-Language Code Extraction Dataset Structure</em>
+</p>
 
 
 Each image must correspond to a ground-truth code file with the **same filename stem**.
@@ -159,21 +156,14 @@ python thesis_img_to_code_pipeline.py
 # Output Structure
 
 The pipeline produces the following outputs:
-outputs/
-├── metrics/
-│ ├── E4_train_metrics.json
-│ ├── E4_val_metrics.json
-│ └── E4_test_metrics.json
-│
-├── predictions/
-│ ├── E4_train_predictions.jsonl
-│ ├── E4_val_predictions.jsonl
-│ └── E4_test_predictions.jsonl
-│
-└── generated_code/
-├── train/
-├── val/
-└── test/
+
+<p align="left">
+  <img src="images/output.png">
+</p>
+
+<p align="left">
+  <em>Figure 2: Vision-Language Code Extraction Output Structure</em>
+</p>
 
 
 ---
@@ -185,12 +175,14 @@ Processed 0001 | Duration: 158.39s
 
 
 Example metrics:
-[E4] TEST METRICS
-Exact Match: 0.0000
-Token Accuracy: 0.9622
-CodeBLEU-like: 0.9103
-Compilation Success: 1.0000
-AST Success: 1.0000
+
+<p align="left">
+  <img src="images/output_metrics.png">
+</p>
+
+<p align="left">
+  <em>Figure 2: Vision-Language Code Extraction Output Metrics</em>
+</p>
 
 
 ---
