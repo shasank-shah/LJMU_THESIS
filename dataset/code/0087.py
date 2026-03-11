@@ -1,0 +1,9 @@
+# Python Program 7
+def calc_7(x, y):
+    total = x + y
+    diff = x - y
+    prod = x * y
+    return total, diff, prod
+
+result = calc_7(20, 18)
+print("Result:", result)

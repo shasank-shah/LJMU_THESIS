@@ -1,0 +1,10 @@
+// Java Program 16
+public class Program16 {
+  static int add(int a,int b){
+    return a+b;
+  }
+  public static void main(String[] args){
+    int r = add(5,4);
+    System.out.println(r);
+  }
+}
