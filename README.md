@@ -14,19 +14,13 @@ The pipeline was developed as part of an academic research project evaluating **
 
 The system uses a multi-stage pipeline:
 
-Image
-↓
-Qwen2.5-VL (Vision Model)
-↓
-Raw Code Extraction
-↓
-Qwen2.5-Coder (Code Repair Model)
-↓
-Syntax / AST Validation
-↓
-Retry Loop (if validation fails)
-↓
-Evaluation Metrics
+<p align="left">
+  <img src="images/pipeline_architecture.png" width="700">
+</p>
+
+<p align="left">
+  <em>Figure 1: Vision-Language Code Extraction Pipeline</em>
+</p>
 
 
 ---
