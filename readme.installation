@@ -1,0 +1,179 @@
+# Installation Guide
+
+This project requires **Python**, **Ollama**, and the **Qwen models** to run the vision-language code extraction pipeline.
+
+---
+
+# 1. Clone the Repository
+
+```bash
+git clone https://github.com/shasank-shah/LJMU_THESIS.git
+cd LJMU_THESIS
+```
+
+---
+
+# 2. Install Python Dependencies
+
+Install the required Python libraries using `requirements.txt`.
+
+```bash
+pip install -r requirements.txt
+```
+
+### requirements.txt
+
+```txt
+requests>=2.31.0
+```
+
+---
+
+# 3. Install Ollama
+
+Ollama is required to run the **Qwen Vision-Language and Code models locally**.
+
+## macOS
+
+Using Homebrew:
+
+```bash
+brew install ollama
+```
+
+Or using the official install script:
+
+```bash
+curl -fsSL https://ollama.com/install.sh | sh
+```
+
+---
+
+## Linux
+
+Install using the official script:
+
+```bash
+curl -fsSL https://ollama.com/install.sh | sh
+```
+
+---
+
+## Windows
+
+Install using **winget**:
+
+```powershell
+winget install Ollama.Ollama
+```
+
+Or download the installer from:
+
+https://ollama.com/download
+
+---
+
+# 4. Start Ollama
+
+After installation, start the Ollama service:
+
+```bash
+ollama serve
+```
+
+---
+
+# 5. Download Required Models
+
+Pull the required **Qwen models** used in the pipeline.
+
+```bash
+ollama pull qwen2.5vl:latest
+ollama pull qwen2.5-coder:7b
+```
+
+These models are used as:
+
+| Model         | Purpose                                               |
+| ------------- | ----------------------------------------------------- |
+| qwen2.5vl     | Vision-Language model for extracting code from images |
+| qwen2.5-coder | Code model for reconstruction and correction          |
+
+---
+
+# 6. Verify Installation
+
+Check that Ollama and models are available:
+
+```bash
+ollama list
+```
+
+Expected output should include:
+
+```
+qwen2.5vl
+qwen2.5-coder
+```
+
+---
+
+# 7. Run the Pipeline
+
+Example command:
+
+```bash
+python thesis_img_to_code_pipeline.py \
+--dataset_dir dataset \
+--out_dir outputs \
+--exp E4 \
+--generate_code \
+--vision_model qwen2.5vl:latest \
+--coder_model qwen2.5-coder:7b \
+--max_retries 2 \
+--timeout_s 900 \
+--ollama_bin "/usr/local/bin/ollama"
+```
+
+---
+
+# 8. Dataset Structure
+
+The dataset directory should follow this format:
+
+```
+dataset/
+├── images/
+│   ├── 0001.png
+│   ├── 0002.png
+│   └── ...
+│
+└── code/
+    ├── 0001.py
+    ├── 0002.cpp
+    └── ...
+```
+
+---
+
+# 9. Output Structure
+
+After execution, outputs will be generated in:
+
+```
+outputs/
+├── metrics/
+├── predictions/
+└── generated_code/
+```
+
+---
+
+# Notes
+
+• Ensure **Ollama is running** before executing the pipeline.
+• The script automatically detects the Ollama binary if installed in standard locations.
+• Models are downloaded locally and run **offline after installation**.
+
+---
+
