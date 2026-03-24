@@ -1,3 +1,24 @@
+# ============================================================
+# Project: CodeXtract - Image-to-Code AI Pipeline
+# Author: Shasank Shah
+# Email: shasank.shah@gmail.com
+# Copyright (c) 2026 Shasank Shah
+#
+# Description:
+# This script implements an AI-driven Vision-Language pipeline
+# using Qwen-VL and Qwen-Coder for extracting and reconstructing
+# source code from images.
+#
+# License:
+# This code is proprietary and confidential.
+# Unauthorized copying, modification, distribution, or use of this
+# code, via any medium, is strictly prohibited without explicit
+# permission from the author.
+#
+# Disclaimer:
+# This software is provided "as-is" for research and academic use.
+# The author is not responsible for misuse or damages.
+# ============================================================
 import os
 import re
 import json
