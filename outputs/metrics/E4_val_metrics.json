@@ -1,7 +1,7 @@
 {
   "exact_match": 0.0,
-  "token_accuracy": 0.7723256704980843,
-  "codebleu_like": 0.9009196965438924,
+  "token_accuracy": 0.775852629477257,
+  "codebleu_like": 0.8215538100162673,
   "compilation_success": 1.0,
   "ast_success": 1.0
 }

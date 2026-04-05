@@ -1,0 +1,12 @@
+// C++ Program 5
+#include <iostream>
+using namespace std;
+int factorial(int n){
+  if(n<=1) return 1;
+  return n*factorial(n-1);
+}
+int main(){
+  cout<<factorial(5)<<endl;
+}
+
+No changes were necessary as the code was already correctly transcribed and syntactically correct.
